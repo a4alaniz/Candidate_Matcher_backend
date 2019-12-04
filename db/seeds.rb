@@ -1,7 +1,66 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Candidate.destroy_all
+Issue.destroy_all
+
+joe = Candidate.create(name: "Joe Biden", age: 77, img_url: "https://cdn.cnn.com/cnn/interactive/2019/02/politics/2020-presidential-candidates-cnnphotos/media/44.jpg")
+bernie = Candidate.create(name: "Bernie Sanders", age: 78, img_url: "https://cdn.cnn.com/cnn/interactive/2019/02/politics/2020-presidential-candidates-cnnphotos/media/50.jpg")
+elizabeth = Candidate.create(name: "Elizabeth Warren", age: 70, img_url: "https://cdn.cnn.com/cnn/interactive/2019/02/politics/2020-presidential-candidates-cnnphotos/media/04.jpg")
+pete = Candidate.create(name: "Pete Buttigieg", age: 37, img_url: "https://cdn.cnn.com/cnn/interactive/2019/02/politics/2020-presidential-candidates-cnnphotos/media/28.jpg")
+andrew = Candidate.create(name: "Andrew Yang", age: 44, img_url: "https://cdn.cnn.com/cnn/interactive/2019/02/politics/2020-presidential-candidates-cnnphotos/media/24.jpg")
+amy = Candidate.create(name: "Amy Klobuchar", age: 59, img_url: "https://cdn.cnn.com/cnn/interactive/2019/02/politics/2020-presidential-candidates-cnnphotos/media/01.jpg")
+corey = Candidate.create(name: "Corey Booker", age: 50, img_url: "https://cdn.cnn.com/cnn/interactive/2019/02/politics/2020-presidential-candidates-cnnphotos/media/08.jpg")
+tulsi = Candidate.create(name: "Tulsi Gabbard", age: 38, img_url: "https://cdn.cnn.com/cnn/interactive/2019/02/politics/2020-presidential-candidates-cnnphotos/media/19.jpg")
+
+Issue.create(name: 'Gun Control', stance: 'Ban', weight: 3, candidate_id: tulsi.id)
+Issue.create(name: 'Gun Control', stance: 'Ban', weight: 4, candidate_id: elizabeth.id)
+Issue.create(name: 'Gun Control', stance: 'Ban', weight: 3, candidate_id: amy.id)
+Issue.create(name: 'Gun Control', stance: 'Voluntary Buyback', weight: 2, candidate_id: joe.id)
+Issue.create(name: 'Gun Control', stance: 'Voluntary Buyback', weight: 1, candidate_id: bernie.id)
+Issue.create(name: 'Gun Control', stance: 'Voluntary Buyback', weight: 4, candidate_id: pete.id)
+Issue.create(name: 'Gun Control', stance: 'Voluntary Buyback', weight: 5, candidate_id: andrew.id)
+Issue.create(name: 'Gun Control', stance: 'Mandotory Buyback', weight: 4, candidate_id: corey.id)
+
+Issue.create(name: 'Immigration', stance: 'Additional Funding ', weight: 3, candidate_id: andrew.id)
+Issue.create(name: 'Immigration', stance: 'Additional Funding', weight: 3, candidate_id: amy.id)
+Issue.create(name: 'Immigration', stance: 'Halt Funding', weight: 4, candidate_id: bernie.id)
+Issue.create(name: 'Immigration', stance: 'Halt Funding', weight: 3, candidate_id: elizabeth.id)
+Issue.create(name: 'Immigration', stance: 'Halt Funding', weight: 3, candidate_id: corey.id)
+Issue.create(name: 'Gun Control', stance: 'Undecided', weight: 3, candidate_id: joe.id)
+Issue.create(name: 'Immigration', stance: 'Undecided', weight: 3, candidate_id: pete.id)
+Issue.create(name: 'Immigration', stance: 'Undecided', weight: 3, candidate_id: tulsi.id)
+
+Issue.create(name: 'Health Care', stance: 'Against Medicare for All with expansion', weight: 3, candidate_id: joe.id)
+Issue.create(name: 'Health Care', stance: 'Against Medicare for All with expansion', weight: 2, candidate_id: pete.id)
+Issue.create(name: 'Health Care', stance: 'Against Medicare for All with expansion', weight: 4, candidate_id: amy.id)
+Issue.create(name: 'Health Care', stance: 'Medicare for All or Some', weight: 2, candidate_id: corey.id)
+Issue.create(name: 'Health Care', stance: 'Medicare for All or Some', weight: 3, candidate_id: tulsi.id)
+Issue.create(name: 'Health Care', stance: 'Medicare for All', weight: 5, candidate_id: bernie.id)
+Issue.create(name: 'Health Care', stance: 'Medicare for All', weight: 3, candidate_id: elizabeth.id)
+Issue.create(name: 'Health Care', stance: 'Medicare for All', weight: 2, candidate_id: andrew.id)
+
+Issue.create(name: 'Wealth Tax', stance: 'Undecided', weight: 3, candidate_id: joe.id) 
+Issue.create(name: 'Wealth Tax', stance: 'Undecided', weight: 3, candidate_id: andrew.id)
+Issue.create(name: 'Wealth Tax', stance: 'Undecided', weight: 3, candidate_id: tulsi.id)
+Issue.create(name: 'Wealth Tax', stance: 'Boost', weight: 5, candidate_id: bernie.id)
+Issue.create(name: 'Wealth Tax', stance: 'Boost', weight: 4, candidate_id: elizabeth.id)
+Issue.create(name: 'Wealth Tax', stance: 'Boost', weight: 3, candidate_id: pete.id)
+Issue.create(name: 'Wealth Tax', stance: 'Boost', weight: 3, candidate_id: amy.id)
+Issue.create(name: 'Wealth Tax', stance: 'Boost', weight: 3, candidate_id: corey.id)
+
+Issue.create(name: 'Marijuana Legalization', stance: 'Decriminalize', weight: 3, candidate_id: joe.id)
+Issue.create(name: 'Marijuana Legalization', stance: 'Legalize', weight: 4, candidate_id: bernie.id)
+Issue.create(name: 'Marijuana Legalization', stance: 'Legalize', weight: 4, candidate_id: elizabeth.id)
+Issue.create(name: 'Marijuana Legalization', stance: 'Legalize', weight: 3, candidate_id: pete.id)
+Issue.create(name: 'Marijuana Legalization', stance: 'Legalize', weight: 3, candidate_id: andrew.id)
+Issue.create(name: 'Marijuana Legalization', stance: 'Legalize', weight: 2, candidate_id: amy.id)
+Issue.create(name: 'Marijuana Legalization', stance: 'Legalize', weight: 5, candidate_id: corey.id)
+Issue.create(name: 'Marijuana Legalization', stance: 'Legalize', weight: 5, candidate_id: tulsi.id)
+
+
+Issue.create(name: 'Defense Spending', stance: 'Boost', weight: 5, candidate_id: joe.id)
+Issue.create(name: 'Defense Spending', stance: 'Boost', weight: 4, candidate_id: corey.id)
+Issue.create(name: 'Defense Spending', stance: 'Boost', weight: 2, candidate_id: pete.id)
+Issue.create(name: 'Defense Spending', stance: 'Slash', weight: 3, candidate_id: bernie.id)
+Issue.create(name: 'Defense Spending', stance: 'Slash', weight: 4, candidate_id: elizabeth.id)
+Issue.create(name: 'Defense Spending', stance: 'Slash', weight: 2, candidate_id: andrew.id)
+Issue.create(name: 'Defense Spending', stance: 'Slash', weight: 4, candidate_id: amy.id)
+Issue.create(name: 'Defense Spending', stance: 'Slash', weight: 4, candidate_id: tulsi.id)
