@@ -1,7 +1,7 @@
 class CandidatesController < ApplicationController
     def index
         candidates = Candidate.all
-        render json: candidates, except: [:created_at, :updated_at]
+        render json: candidates, include: [:issues], except: [:created_at, :updated_at]
     end
 
     def show
