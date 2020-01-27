@@ -11,7 +11,7 @@ Candidate Matcher is available online now at https://candidate-matcher.herokuapp
 
 link to just the backend (https://sleepy-bastion-46695.herokuapp.com/)
 
-Available routes are /Candidates, /States
+Available routes are /Candidates, /users, /issues
 
 ## Built With
 -Ruby on Rails  
