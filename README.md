@@ -1,24 +1,21 @@
-# README
+## Link to Candidate Matcher Frontend:
+https://github.com/Bigg-O/Candidate-Matcher_frontend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Candidate Matcher
 
-Things you may want to cover:
+In an age where most of the major news networks are seeming to display a rising political bias, Candidate Matcher is intended to provide you with a short and sweet, unbiased comparative guide between the current major democratic candidates running for the 2020 election.
 
-* Ruby version
+## Getting Started
 
-* System dependencies
+Candidate Matcher is available online now at https://candidate-matcher.herokuapp.com. You can immediately see all the candidates with their views on key issues, and then you can compare on an issue by issue basis by clicking directly on an issue underneath the candidate cards. The site also allows you to see a full list of all the politicians that govern you based on an address you provide in the search bar!
 
-* Configuration
+link to just the backend (https://sleepy-bastion-46695.herokuapp.com/)
+Available routes are /Candidates, /States
 
-* Database creation
+## Built With
+-Ruby on Rails  
+-PostgreSQL  
 
-* Database initialization
+### Created By:
+Wookeun Song (Bigg-O) & Angel Alaniz (A4Alaniz)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
